@@ -3,7 +3,7 @@
 INITIAL_VALUE = 0;
 count = INITIAL_VALUE;
 user = str('admin');
-passfile_path = 'C:\\Users\\user\\Documents\\wordlists\\test.txt';
+passfile_path = 'C:\\Users\\user\\Documents\\wordlists\\passwords.txt';
 NUMBER_OF_PAYLOADS = sum(1 for line in open(passfile_path));
 passwd = list();
 for line in open(passfile_path):    # initializing passwords into list
