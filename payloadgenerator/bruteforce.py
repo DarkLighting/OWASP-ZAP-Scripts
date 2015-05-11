@@ -1,5 +1,7 @@
 # Auxiliary variables/constants for payload generation.
 
+import base64;
+
 INITIAL_VALUE = 0;
 count = INITIAL_VALUE;
 user = str('admin');
@@ -35,7 +37,7 @@ def next():
     count+=1;
     print('incremented next_count = ' + str(count));
     print(user+':'+passwd[payload]);
-    return user+':'+passwd[payload];
+    return base64.b64encode(user+':'+passwd[payload]);
 
 
 # Resets the internal state of the payload generator, as if no calls to
